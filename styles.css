@@ -25,6 +25,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     background: transparent;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -40,7 +41,8 @@ h1 {
     padding: var(--container-padding);
     box-shadow: var(--shadow);
     margin-bottom: 20px;
-    width: calc(100% - 2 * var(--container-padding));
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .toggle-container {
@@ -82,11 +84,13 @@ h1 {
     display: flex;
     gap: 12px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .time-inputs input {
     flex: 1;
     min-width: 0;
+    box-sizing: border-box;
 }
 
 input, select {
@@ -97,6 +101,7 @@ input, select {
     font-size: 16px;
     transition: all 0.3s ease;
     background: var(--white);
+    box-sizing: border-box;
 }
 
 input:focus {
@@ -209,15 +214,18 @@ button:hover {
 
     .calculator-container {
         padding: 0 12px;
+        width: 100%;
     }
 
     .input-section {
-        padding: 16px;
+        padding: var(--container-padding);
+        margin: 0 auto 20px auto;
     }
 
     .time-inputs {
         flex-direction: column;
         gap: 8px;
+        padding: 0;
     }
 
     h1 {
