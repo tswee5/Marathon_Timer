@@ -100,12 +100,16 @@ function calculate() {
         
         resultElement.innerHTML = `
             <div class="result-section">
-                <h2>Your Marathon Time</h2>
-                <p style="font-size: 24px; font-weight: 600; color: var(--primary-color); margin-bottom: 24px; text-align: center;">
-                    ${marathonHours}:${marathonMinutes.toString().padStart(2, '0')}:${marathonSeconds.toString().padStart(2, '0')}
-                </p>
-                <h2>Estimated Race Times</h2>
-                ${generatePaceTable(minutes, seconds)}
+                <div class="result-header">
+                    <h2>Your Marathon Time</h2>
+                    <p style="font-size: 24px; font-weight: 600; color: var(--primary-color); margin-bottom: 24px; text-align: center;">
+                        ${marathonHours}:${marathonMinutes.toString().padStart(2, '0')}:${marathonSeconds.toString().padStart(2, '0')}
+                    </p>
+                    <h2>Estimated Race Times</h2>
+                </div>
+                <div class="table-container">
+                    ${generatePaceTable(minutes, seconds)}
+                </div>
             </div>
         `;
     } else {
@@ -127,12 +131,16 @@ function calculate() {
         
         resultElement.innerHTML = `
             <div class="result-section">
-                <h2>Your Mile Pace</h2>
-                <p style="font-size: 24px; font-weight: 600; color: var(--primary-color); margin-bottom: 24px; text-align: center;">
-                    ${paceMinutes}:${paceSeconds.toString().padStart(2, '0')} per mile
-                </p>
-                <h2>Estimated Race Times</h2>
-                ${generatePaceTable(paceMinutes, paceSeconds)}
+                <div class="result-header">
+                    <h2>Your Mile Pace</h2>
+                    <p style="font-size: 24px; font-weight: 600; color: var(--primary-color); margin-bottom: 24px; text-align: center;">
+                        ${paceMinutes}:${paceSeconds.toString().padStart(2, '0')} per mile
+                    </p>
+                    <h2>Estimated Race Times</h2>
+                </div>
+                <div class="table-container">
+                    ${generatePaceTable(paceMinutes, paceSeconds)}
+                </div>
             </div>
         `;
     }
